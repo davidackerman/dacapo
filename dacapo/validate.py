@@ -226,7 +226,8 @@ def validate_run(
 
             # delete current output. We only keep the best outputs as determined by
             # the evaluator
-            array_store.remove(output_array_identifier)
+            # remove deletion for now since we have to rerun later to double check things anyway
+            # array_store.remove(output_array_identifier)
 
             dataset_iteration_scores.append(
                 [getattr(scores, criterion) for criterion in scores.criteria]
